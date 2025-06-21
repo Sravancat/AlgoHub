@@ -11,7 +11,6 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("http://localhost:3000")
-                .allowedOriginPatterns("*")
          // use allowedOriginPatterns instead of allowedOrigins for wildcard
                 .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
                 .allowCredentials(true); // Optional, if you're using cookies/auth headers
